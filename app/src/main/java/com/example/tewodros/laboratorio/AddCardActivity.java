@@ -1,13 +1,11 @@
 package com.example.tewodros.laboratorio;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
-
-import javax.xml.transform.Result;
+import android.widget.Toast;
 
 public class AddCardActivity extends AppCompatActivity {
 
@@ -28,10 +26,9 @@ public class AddCardActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String Question = ((EditText) findViewById(R.id.Question)).getText().toString();
                 String Answer = ((EditText) findViewById(R.id.Answer)).getText().toString();
-                Intent data = new Intent(AddCardActivity.this, MainActivity.class);
-                startActivity(data);
-                data.putExtra("string1", "Question");
-                data.putExtra("string2", "Answer");
+                Intent data = new Intent();
+                data.putExtra("string1", Question);
+                data.putExtra("string2", Answer);
                 setResult(RESULT_OK, data);
                 finish();
             }
