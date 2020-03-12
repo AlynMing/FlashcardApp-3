@@ -10,12 +10,25 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
+
+    FlashcardDatabase flashcardDatabase;
+    List<Flashcard> allFlashcards;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        flashcardDatabase = new FlashcardDatabase(getApplicationContext());
+        allFlashcards = flashcardDatabase.getAllCards();
+
+        if (allFlashcards != null && allFlashcards.size() > 0) {
+            ((TextView) findViewById(R.id.flashcard_question)).setText(allFlashcards.get(0).getQuestion());
+            ((TextView) findViewById(R.id.flashcard_answer1)).setText(allFlashcards.get(0).getAnswer());
+        }
 
         findViewById(R.id.flashcard_question).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,14 +59,20 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
+
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK) {
-            String string1 = data.getStringExtra("string1");
-            String string2 = data.getStringExtra("string2");
-            ((TextView)findViewById(R.id.flashcard_question)).setText(string1);
-            ((TextView)findViewById(R.id.flashcard_answer1)).setText(string2);
+            String question = data.getStringExtra("string1");
+            String answer = data.getStringExtra("string2");
+
+            flashcardDatabase.insertCard(new Flashcard(question, answer));
+            allFlashcards = flashcardDatabase.getAllCards();
+
+            ((TextView)findViewById(R.id.flashcard_question)).setText(question);
+            ((TextView)findViewById(R.id.flashcard_answer1)).setText(answer);
         }
     }
 }
