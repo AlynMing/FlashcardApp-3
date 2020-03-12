@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 /*
                 (findViewById(R.id.flashcard_question)).setBackgroundColor(
                         getResources().getColor(R.color.my_red_color, null));
-                 */
+                */
             }
         });
 
