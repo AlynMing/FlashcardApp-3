@@ -1,9 +1,30 @@
 ## laboratorio
 
+## Lab 3
+
+### App Description
+Lab 3: Flashcard App - Saving Cards
+- Understand how to save data within an app
+- Understand how to retrieve saved data within an app
+
+### App Walk-though
+<img src="YOUR_GIF_URL_HERE" width=200><br>
+
+## Required
+- [x] User can create a card and still see their created card when the app is relaunched.
+- [x] User can create muliple cards and browse through all created cards
+
+## Optional
+- [ ] User can delete a card and no longer see it in their deck anymore
+- [ ] Flashcards are shown in random order instead of the order they were created in
+- [ ] User can edit a card and see the edit saved when they browse through their deck of cards
+- [ ] User can create flashcards with multiple answers and be able to browse through cards with multiple choice answers shown
+
 ## Lab 2
 
 ### App Description
-Lab 2: Flashcard App
+Lab 2 - Creating Cards
+- Let users create their own flashcard
 
 ### App Walk-though
 <img src="Lab 2.gif" width=200><br>
@@ -25,7 +46,8 @@ Lab 2: Flashcard App
 ## Lab-1
 
 ### App Description
-Lab 1: Flashcard App
+Lab 1: Creatng our Flashcard App
+- Add and customize views to be displayed on the screen
 
 ### App Walk-though
 <img src="Lab1.gif" width=200><br>
