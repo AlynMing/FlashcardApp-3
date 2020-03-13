@@ -24,11 +24,11 @@ public class AddCardActivity extends AppCompatActivity {
         findViewById(R.id.saveBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String Question = ((EditText) findViewById(R.id.Question)).getText().toString();
-                String Answer = ((EditText) findViewById(R.id.Answer)).getText().toString();
+                String questions = ((EditText) findViewById(R.id.Question)).getText().toString();
+                String answers = ((EditText) findViewById(R.id.Answer)).getText().toString();
                 Intent data = new Intent();
-                data.putExtra("string1", Question);
-                data.putExtra("string2", Answer);
+                data.putExtra("string1", questions);
+                data.putExtra("string2", answers);
                 setResult(RESULT_OK, data);
                 finish();
             }
