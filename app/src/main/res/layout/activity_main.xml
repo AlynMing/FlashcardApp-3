@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#696969"
+    android:id="@+id/rootView"
     tools:context=".MainActivity">
 
     <TextView
@@ -20,13 +21,46 @@
 
     <TextView
         android:id="@+id/flashcard_answer1"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:textSize="40sp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/flashcard_answer2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="74dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/answer3"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:text="Bill Clinton"
+        android:textColor="#000"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/flashcard_answer2"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/flashcard_answer3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/answer3"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:text="George H. W. Bush"
+        android:textColor="#000"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/flashcard_answer3"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/answer3"
+        android:elevation="5dp"
         android:gravity="center"
         android:text="Barack Obama"
-        android:visibility="invisible"
-        android:textColor="#ffd700" />
+        android:textColor="#000"
+        android:textSize="30sp" />
 
     <ImageView
         android:id="@+id/addBtn"
@@ -39,14 +73,53 @@
         android:src="@drawable/add" />
 
     <ImageView
+        android:id="@+id/edit"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_alignStart="@+id/flashcard_question"
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/edit" />
+
+    <ImageView
         android:id="@+id/nextBtn"
         android:layout_width="46dp"
         android:layout_height="46dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="260dp"
+        android:layout_below="@+id/flashcard_question"
+        android:layout_alignEnd="@+id/flashcard_question"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
         android:src="@drawable/next" />
+
+    <!--<ImageView-->
+        <!--android:id="@+id/toggle_choices_visibility"-->
+        <!--android:layout_width="46dp"-->
+        <!--android:layout_height="46dp"-->
+        <!--android:layout_below="@+id/flashcard_question"-->
+        <!--android:layout_alignStart="@+id/flashcard_question"-->
+        <!--android:layout_marginStart="15dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:src="@drawable/invisible" />-->
+
+    <!--<ImageView-->
+        <!--android:id="@+id/deleteBtn"-->
+        <!--android:layout_width="46dp"-->
+        <!--android:layout_height="46dp"-->
+        <!--android:layout_below="@+id/flashcard_question"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_marginBottom="246dp"-->
+        <!--android:src="@drawable/trash" />-->
+
+    <Button
+        android:id="@+id/resetBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/addBtn"
+        android:layout_centerHorizontal="true"
+        android:text="Reset" />
 
     <!--<ImageView-->
         <!--android:id="@+id/deleteBtn"-->
