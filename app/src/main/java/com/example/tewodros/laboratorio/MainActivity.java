@@ -90,7 +90,6 @@ public class MainActivity extends AppCompatActivity {
                     ((TextView) findViewById(R.id.flashcard_answer2)).setText(allFlashcards.get(currentCardDisplayedIndex).getWrongAnswer1());
                     ((TextView) findViewById(R.id.flashcard_answer3)).setText(allFlashcards.get(currentCardDisplayedIndex).getWrongAnswer2());
                 }
-
 //                ((ImageView) findViewById(R.id.toggle_choices_visibility)).setImageResource(R.drawable.invisible);
 //                findViewById(R.id.flashcard_answer1).setVisibility(View.VISIBLE);
 //                findViewById(R.id.flashcard_answer2).setVisibility(View.VISIBLE);
