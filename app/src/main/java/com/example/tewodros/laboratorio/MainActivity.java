@@ -51,20 +51,16 @@ public class MainActivity extends AppCompatActivity {
 
                 View answerSideView = findViewById(R.id.flashcard_answer1);
 
-// get the center for the clipping circle
+                // get the center for the clipping circle
                 int cx = answerSideView.getWidth() / 2;
                 int cy = answerSideView.getHeight() / 2;
 
-// get the final radius for the clipping circle
+                // get the final radius for the clipping circle
                 float finalRadius = (float) Math.hypot(cx, cy);
 
-// create the animator for this view (the start radius is zero)
+                // create the animator for this view (the start radius is zero)
                 Animator anim = ViewAnimationUtils.createCircularReveal(answerSideView, cx, cy, 0f, finalRadius);
-
-// hide the question and show the answer to prepare for playing the animation!
-//                questionSideView.setVisibility(View.INVISIBLE);
-//                answerSideView.setVisibility(View.VISIBLE);
-
+                
                 anim.setDuration(3000);
                 anim.start();
             }
