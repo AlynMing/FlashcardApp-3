@@ -58,10 +58,10 @@ Lab 2 - Creating Cards
 
 ## Optional
 - [x] User can edit a card
-- [ ] An error message is shown if the user doesn't enter both a Question and an Answer
-- [ ] A notification is shown if the card was created successfully
-- [ ] User can also enter multiple choice answers when creating a card
-- [ ] App is further styled and customized!
+- [x] An error message is shown if the user doesn't enter both a Question and an Answer
+- [x] A notification is shown if the card was created successfully
+- [x] User can also enter multiple choice answers when creating a card
+- [x] App is further styled and customized!
 
 ## Lab-1
 
@@ -81,6 +81,6 @@ Lab 1: Creatng our Flashcard App
 ## Optional
 - [x] toggle the flashcard between the question side and the answer side
 - [x] Style the question and answer side of the card to better distinguish between the two sides
-- [ ] Add selectable multiple choice answers beneath the card
-   - [ ] Change the background color of the multiple choice answers when clicked to indicate whether the question waanswered correctly
-- [ ] Further customize and style the card
+- [x] Add selectable multiple choice answers beneath the card
+   - [x] Change the background color of the multiple choice answers when clicked to indicate whether the question waanswered correctly
+- [x] Further customize and style the card
