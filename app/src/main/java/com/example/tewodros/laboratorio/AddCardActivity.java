@@ -23,10 +23,10 @@ public class AddCardActivity extends AppCompatActivity {
         String s3 = getIntent().getStringExtra("edit3");
         String s4 = getIntent().getStringExtra("edit4");
 
-        ((TextView) findViewById(R.id.new_question)).setText(s1);
-        ((TextView) findViewById(R.id.new_answer1)).setText(s2);
-        ((TextView) findViewById(R.id.new_answer2)).setText(s3);
-        ((TextView) findViewById(R.id.new_answer3)).setText(s4);
+        ((TextView) findViewById(R.id.edit_question)).setText(s1);
+        ((TextView) findViewById(R.id.edit_answer)).setText(s2);
+        ((TextView) findViewById(R.id.edit_wronganswer1)).setText(s3);
+        ((TextView) findViewById(R.id.edit_wronganswer2)).setText(s4);
 
         findViewById(R.id.cancelBtn).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,17 +38,18 @@ public class AddCardActivity extends AppCompatActivity {
         findViewById(R.id.saveBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String q1 = ((EditText) findViewById(R.id.new_question)).getText().toString();
-                String a1 = ((EditText) findViewById(R.id.new_answer1)).getText().toString();
-                String a2 = ((EditText) findViewById(R.id.new_answer2)).getText().toString();
-                String a3 = ((EditText) findViewById(R.id.new_answer3)).getText().toString();
+                String question = ((EditText) findViewById(R.id.edit_question)).getText().toString();
+                String answer = ((EditText) findViewById(R.id.edit_answer)).getText().toString();
+                String wronganswer1 = ((EditText) findViewById(R.id.edit_wronganswer1)).getText().toString();
+                String wronganswer2 = ((EditText) findViewById(R.id.edit_wronganswer2)).getText().toString();
+
                 Intent data = new Intent();
-                data.putExtra("string1", q1);
-                data.putExtra("string2", a1);
-                data.putExtra("string3", a2);
-                data.putExtra("string4", a3);
+                data.putExtra("string1", question);
+                data.putExtra("string2", answer);
+                data.putExtra("string3", wronganswer1);
+                data.putExtra("string4", wronganswer2);
                 setResult(RESULT_OK, data);
-                if (q1.isEmpty() || a1.isEmpty() || a2.isEmpty() || a3.isEmpty()) {
+                if (question.isEmpty() || answer.isEmpty() || wronganswer1.isEmpty() || wronganswer2.isEmpty()) {
                     Toast.makeText(getApplicationContext(), "Must enter all fields!", Toast.LENGTH_SHORT).show();
                 }
                 else {

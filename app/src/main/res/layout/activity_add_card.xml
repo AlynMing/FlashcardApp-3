@@ -28,7 +28,7 @@
         android:src="@drawable/save" />
 
     <EditText
-        android:id="@+id/new_question"
+        android:id="@+id/edit_question"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_margin="20dp"
@@ -36,36 +36,36 @@
         android:hint="Enter the question here" />
 
     <EditText
-        android:id="@+id/new_answer1"
+        android:id="@+id/edit_answer"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:layout_below="@+id/new_question"
+        android:layout_below="@+id/edit_question"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Enter the correct answer here"
+        android:inputType="textMultiLine" />
+
+    <EditText
+        android:id="@+id/edit_wronganswer1"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/edit_answer"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="20dp"
         android:hint="Enter wrong answer option here"
         android:inputType="textMultiLine" />
 
     <EditText
-        android:id="@+id/new_answer2"
+        android:id="@+id/edit_wronganswer2"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:layout_below="@+id/new_answer1"
+        android:layout_below="@+id/edit_wronganswer1"
         android:layout_marginStart="20dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="20dp"
         android:hint="Enter another wrong answer option here"
-        android:inputType="textMultiLine" />
-
-    <EditText
-        android:id="@+id/new_answer3"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_below="@+id/new_answer2"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="20dp"
-        android:hint="Enter the answer here"
         android:inputType="textMultiLine" />
 
 </RelativeLayout>
